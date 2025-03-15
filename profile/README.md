@@ -44,24 +44,24 @@ ist verlinkt.
 Damit das funktioniert, muss das GitHub Repository folgendermassen
 vorbereitet werden:
 
-1. Aktivieren vonGitHub Pages im Repository:
+1. Aktivieren von GitHub Pages im Repository:
    * "Settings" → "Pages"
    * "GitHub Actions" als Quelle auswählen
 2. Sicherstellen, dass die GitHub Actions die nötigen Berechtigungen haben:
    * "Settings" → "Actions" → "General" → "Workflow permissions"
    * Erforderliche Berechtigungen: pages: write, id-token: write, contents: write
-3. Installation der erforderlichen Pakete:
+3. Installation der erforderlichen Pakete (nur für lokale Entwicklung und Tests):
    * `pip install jupyter-book`
-   * `pip install ghp-import` (wird für den manuellen Deploy benötigt)
+   * `pip install ghp-import` (optional, nur wenn Sie lokale Builds testen möchten)
 4. Konfiguration der wichtigen Dateien:
    * `_config.yml`: Enthält alle Metainformationen zum Buch (Titel, Autor, etc.)
    * `_toc.yml`: Definiert die Struktur und Navigation des Buches
-5. Erstellung eines leeren gh-pages Branches (falls nötig):
-   * `git checkout --orphan gh-pages`
-   * `git rm -rf .`
-   * `git commit --allow-empty -m "Initialisiere gh-pages branch"`
-   * `git push origin gh-pages`
-   * `git checkout main`
+5. Hinzufügen der deploy-book.yml Datei zum Pfad `.github/workflows/`
+
+Nach diesen Vorbereitungen werden Änderungen automatisch bei jedem Push
+auf den main-Branch veröffentlicht. Die GitHub Action kümmert sich um
+den Build und die Veröffentlichung - ein manueller Deploy ist nicht mehr
+nötig.
 
 
 
