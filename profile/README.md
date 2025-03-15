@@ -30,3 +30,14 @@ Die Beschreibung des Publikationsprozesses geht von folgender Dateistruktur aus:
 |-.nojekyll
 |README.md
 
+Entsprechend werden die Inhalte aus dem Ordner docs publiziert. Nachdem
+die Inhalte mit dem Befehl `jupyter-book build .` aus dem Ordner docs
+heraus in HTML konvertiert worden sind, können Sie mit einem einfachen
+`git push origin main` publiziert werden. Die durch das in 
+`.github/workflows/deploy-book.yml` gesteuerte GitHub Action erledigt alle
+für die Publikation erforderlichen Schritte. Der Inhalt des Files 
+[deploy-book.yml](../sources/deploy-book.yml)
+ist verlinkt.
+
+
+
