@@ -1,6 +1,6 @@
 # Skripten
 
-Diese Organisation soll in Zukunft meine den Schülern zur Verfügung gestellten Skripten aufnehmen. Ich möchte diese Gerne als Jupyter Books publizieren. Entsprechend findte sich hier eine rudimentäre Anleitung.
+Diese Organisation soll in Zukunft meine den Schülern zur Verfügung gestellten Skripten aufnehmen. Ich möchte diese gerne als Jupyter Books publizieren. Entsprechend findte sich hier eine rudimentäre Anleitung.
 
 ## Erstellen eines Jupyter Book
 
@@ -8,7 +8,7 @@ Für die Anleitung zum erstellen eines Jupyter Book kann auf die
 [Anleitung](https://jupyterbook.org/en/stable/start/your-first-book.html)
 verwiesen werden. 
 
-## Puplizieren des Inhaltes mit GitHub Pages
+## Publizieren des Inhaltes mit GitHub Pages
 
 Die Beschreibung des Publikationsprozesses geht von folgender Dateistruktur aus:
 
@@ -18,7 +18,7 @@ Die Beschreibung des Publikationsprozesses geht von folgender Dateistruktur aus:
 |       |-deploy-book.yml  
 |-docs/  
 |   |-_build/  
-|   |-conetnt1/  
+|   |-content1/  
 |   |   |-file.md  
 |   |   |-file.md  
 |   |-content2/  
