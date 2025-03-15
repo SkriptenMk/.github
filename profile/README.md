@@ -50,6 +50,18 @@ vorbereitet werden:
 2. Sicherstellen, dass die GitHub Actions die nötigen Berechtigungen haben:
    * "Settings" → "Actions" → "General" → "Workflow permissions"
    * Erforderliche Berechtigungen: pages: write, id-token: write, contents: write
+3. Installation der erforderlichen Pakete:
+   * `pip install jupyter-book`
+   * `pip install ghp-import` (wird für den manuellen Deploy benötigt)
+4. Konfiguration der wichtigen Dateien:
+   * `_config.yml`: Enthält alle Metainformationen zum Buch (Titel, Autor, etc.)
+   * `_toc.yml`: Definiert die Struktur und Navigation des Buches
+5. Erstellung eines leeren gh-pages Branches (falls nötig):
+   * `git checkout --orphan gh-pages`
+   * `git rm -rf .`
+   * `git commit --allow-empty -m "Initialisiere gh-pages branch"`
+   * `git push origin gh-pages`
+   * `git checkout main`
 
 
 
