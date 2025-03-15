@@ -41,5 +41,15 @@ für die Publikation erforderlichen Schritte. Der Inhalt des Files
 [deploy-book.yml](../sources/deploy-book.yml)
 ist verlinkt.
 
+Damit das funktioniert, muss das GitHub Repository folgendermassen
+vorbereitet werden:
+
+1. Aktivieren vonGitHub Pages im Repository:
+   * "Settings" → "Pages"
+   * "GitHub Actions" als Quelle auswählen
+2. Sicherstellen, dass die GitHub Actions die nötigen Berechtigungen haben:
+   * "Settings" → "Actions" → "General" → "Workflow permissions"
+   * Erforderliche Berechtigungen: pages: write, id-token: write, contents: write
+
 
 
