@@ -12,23 +12,25 @@ verwiesen werden.
 
 Die Beschreibung des Publikationsprozesses geht von folgender Dateistruktur aus:
 
-|-.github/
-|   |-workflows
-|       |-deploy-book.yml
-|-docs/
-|   |-_build/
-|   |-conetnt1/
-|   |   |-file.md
-|   |   |-file.md
-|   |-content2/
-|   |-.nojekyll
-|   |-_config.yml
+```{txt}
+|-.github/  
+|   |-workflows  
+|       |-deploy-book.yml  
+|-docs/  
+|   |-_build/  
+|   |-conetnt1/  
+|   |   |-file.md  
+|   |   |-file.md  
+|   |-content2/  
+|   |-.nojekyll  
+|   |-_config.yml  
 |   |-_toc.yml
 |   |-intro.md
 |   |-logo.png
 |-.gitignore
 |-.nojekyll
 |README.md
+```
 
 Entsprechend werden die Inhalte aus dem Ordner docs publiziert. Nachdem
 die Inhalte mit dem Befehl `jupyter-book build .` aus dem Ordner docs
