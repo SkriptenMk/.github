@@ -63,5 +63,11 @@ auf den main-Branch veröffentlicht. Die GitHub Action kümmert sich um
 den Build und die Veröffentlichung - ein manueller Deploy ist nicht mehr
 nötig.
 
+Die effektiv erfoderlichen Arbeitsschritte sind:
+
+1. `git add ./*`
+2. `git commit`
+3. `git push oritin main`
+
 
 
