@@ -1,73 +1,55 @@
-# Skripten
+# SkriptenMk — Unterrichtsmaterialien von Jacques Mock Schindler
 
-Diese Organisation soll in Zukunft meine den Schülern zur Verfügung gestellten Skripten aufnehmen. Ich möchte diese gerne als Jupyter Books publizieren. Entsprechend findte sich hier eine rudimentäre Anleitung.
+Diese GitHub-Organisation enthält öffentlich zugängliche Unterrichtsmaterialien für die Fächer
+**Informatik**, **Wirtschaft und Recht (WR)**, **Projektarbeit WR (PrWR)** und
+**Finanz- und Rechnungswesen (FRW)** an der
+[Kantonsschule Büelrain Winterthur (KBW)](https://www.kbw.ch).
 
-## Erstellen eines Jupyter Book
+## Über diese Materialien
 
-Für die Anleitung zum erstellen eines Jupyter Book kann auf die 
-[Anleitung](https://jupyterbook.org/en/stable/start/your-first-book.html)
-verwiesen werden. 
+Die Unterlagen werden laufend weiterentwickelt und spiegeln den aktuellen Stand des Unterrichts
+wider. Sie sind bewusst öffentlich zugänglich — einerseits um Transparenz über die Unterrichtsinhalte
+zu schaffen, andererseits um Schülerinnen und Schüler zu ermutigen, ihre eigenen Arbeiten ebenfalls
+öffentlich zu teilen.
 
-## Publizieren des Inhaltes mit GitHub Pages
+Feedback, Korrekturen und Verbesserungsvorschläge sind ausdrücklich willkommen — via
+[Issues](https://github.com/orgs/SkriptenMk/repositories) oder Pull Requests.
 
-Die Beschreibung des Publikationsprozesses geht von folgender Dateistruktur aus:
+## Verfügbare Skripten
 
-```{txt}
-|-.github/  
-|   |-workflows  
-|       |-deploy-book.yml  
-|-docs/  
-|   |-_build/  
-|   |-content1/  
-|   |   |-file.md  
-|   |   |-file.md  
-|   |-content2/  
-|   |-.nojekyll  
-|   |-_config.yml  
-|   |-_toc.yml
-|   |-intro.md
-|   |-logo.png
-|-.gitignore
-|-.nojekyll
-|README.md
-```
+### Informatik
 
-Entsprechend werden die Inhalte aus dem Ordner docs publiziert. Nachdem
-die Inhalte mit dem Befehl `jupyter-book build .` aus dem Ordner docs
-heraus in HTML konvertiert worden sind, können Sie mit einem einfachen
-`git push origin main` publiziert werden. Die durch das in 
-`.github/workflows/deploy-book.yml` gesteuerte GitHub Action erledigt alle
-für die Publikation erforderlichen Schritte. Der Inhalt des Files 
-[deploy-book.yml](../sources/deploy-book.yml)
-ist verlinkt.
+| Skript | Klasse / Schwerpunkt | Format | Status |
+|--------|----------------------|--------|--------|
+| [Informatik PPP-Klasse](https://skriptenmk.github.io/I_fP_24-28/intro.html) | fP (PPP), Jahrgang 24–28 | Jupyter Book | laufend |
+| [Informatik WR-Klasse (Immersion)](https://skriptenmk.github.io/I_eW_24-28/) | eW (WR), Jahrgang 24–28, Unterricht auf Englisch | Quarto Website | laufend |
+| [Informatik WR-Klasse](https://skriptenmk.github.io/I_eW_25-29/) | eW (WR), Jahrgang 25–29 | Quarto Website | laufend |
 
-Damit das funktioniert, muss das GitHub Repository folgendermassen
-vorbereitet werden:
+### Wirtschaft und Recht / Projektarbeit
 
-1. Aktivieren von GitHub Pages im Repository:
-   * "Settings" → "Pages"
-   * "GitHub Actions" als Quelle auswählen
-2. Sicherstellen, dass die GitHub Actions die nötigen Berechtigungen haben:
-   * "Settings" → "Actions" → "General" → "Workflow permissions"
-   * Erforderliche Berechtigungen: pages: write, id-token: write, contents: write
-3. Installation der erforderlichen Pakete (nur für lokale Entwicklung und Tests):
-   * `pip install jupyter-book`
-   * `pip install ghp-import` (optional, nur wenn Sie lokale Builds testen möchten)
-4. Konfiguration der wichtigen Dateien:
-   * `_config.yml`: Enthält alle Metainformationen zum Buch (Titel, Autor, etc.)
-   * `_toc.yml`: Definiert die Struktur und Navigation des Buches
-5. Hinzufügen der deploy-book.yml Datei zum Pfad `.github/workflows/`
+| Skript | Klasse / Schwerpunkt | Format | Status |
+|--------|----------------------|--------|--------|
+| [PrWR — Projektarbeit WR](https://skriptenmk.github.io/PRWR_cH_23-27/) | 3cH, Jahrgang 23–27 | Quarto Website | laufend |
 
-Nach diesen Vorbereitungen werden Änderungen automatisch bei jedem Push
-auf den main-Branch veröffentlicht. Die GitHub Action kümmert sich um
-den Build und die Veröffentlichung - ein manueller Deploy ist nicht mehr
-nötig.
+### Finanz- und Rechnungswesen
 
-Die effektiv erfoderlichen Arbeitsschritte sind:
+| Skript | Klasse / Schwerpunkt | Format | Status |
+|--------|----------------------|--------|--------|
+| [FRW Abschlusstraining](https://skriptenmk.github.io/FRW_I_23-26/) | 3I, Jahrgang 23–26 | Quarto Website | abgeschlossen |
 
-1. `git add ./*`
-2. `git commit`
-3. `git push oritin main`
+## Sprechstunden
 
+Fragen zum Unterricht, zu den Materialien oder zu Aufgaben beantworte ich gerne persönlich.
+Sprechstunden können direkt über meinen Kalender gebucht werden:
 
+**[Sprechstunde buchen](https://calendar.app.google/8QW8J3tU6CF8VaUf9)**
 
+Die Sprechstunden werden von Schülerinnen und Schülern regelmässig genutzt — für Fragen zu
+laufenden Aufgaben ebenso wie für vertiefende Diskussionen über Unterrichtsinhalte.
+
+## Kontakt
+
+- **Schule:** [Kantonsschule Büelrain Winterthur](https://www.kbw.ch)
+- **E-Mail:** jacques.mock@kbw.ch
+- **GitHub:** [Jacques-Mock-Schindler](https://github.com/Jacques-Mock-Schindler)
+- **LinkedIn:** [Jacques Mock Schindler](https://www.linkedin.com/in/jacques-mock-schindler-19607517/)
